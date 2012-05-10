@@ -1,0 +1,15 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+div.content {
+    position:absolute;
+    display:block;
+    height: 32px;
+    width: 32px;
+    background:url('/images/mouse.png') no-repeat top left;
+}
