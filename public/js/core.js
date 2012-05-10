@@ -4,7 +4,7 @@ define(['order!io', 'model/mainUser'], function(io, MainUserModel) {
 
   return function() {
 
-    var socket = io.connect('http://localhost'),
+    var socket = io.connect('http://mousy.nodejitsu.com/'),
         model = new MainUserModel(socket);
 
     $(document).mousemove(function (e) {
@@ -16,7 +16,7 @@ define(['order!io', 'model/mainUser'], function(io, MainUserModel) {
 
     this.socket = function() {
       return socket;
-    }
+    };
   }
 
   });
