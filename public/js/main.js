@@ -8,15 +8,17 @@ require.config({
     }
 });
 
-require(['core', 'collection/userCollection', 'view/statsView'], function (Core, UserCollection, StatsView) {
+require(['order!io',
+         'model/mainUser', 
+         'collection/userCollection', 
+         'view/statsView',
+         'view/mainUserView'], function (io, MainUserModel, UserCollection, StatsView, MainUserView) {
 
-    'use strict';
+  'use strict';
 
-
-    var application    = new Core(),
-        userCollection = new UserCollection(application.socket()),
-        statsView      = new StatsView(userCollection);
-
-
-
+    var sockets        = io.connect('http://localhost'),
+        mainUserModel  = new MainUserModel(sockets),
+        mainUserView   = new MainUserView({ model : mainUserModel }), 
+        userCollection = new UserCollection(sockets), 
+        statsView      = new StatsView({ collection : userCollection});
 });

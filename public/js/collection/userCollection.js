@@ -30,12 +30,8 @@ define(['order!underscore','order!backbone', 'model/userModel', 'lib/backbone-lo
                 i;
 
             for (i = 0; i < arr.length; i += 1) {
-                arr[i].set({
-                    x: data.x,
-                    y: data.y
-                });
+                arr[i].set(data);
             }
         },
     });
-
 });

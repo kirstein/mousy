@@ -1,6 +1,11 @@
 p Playground!
+
+script(type='template', id='main-template')
+  form(action='#', method='post')
+    input(type='text', id='input')
 script(type='template', id='user-template')
   .content
+    p <%= text %>
 script(type='template', id='stats-template')
   #stats
     p <%= count %> active test subjects.

@@ -13,7 +13,8 @@ define(['order!backbone', 'view/userView'], function(Backbone, UserView) {
         defaults: {
             id: null,
             x: -100,
-            y: -100
+            y: -100,
+         text: ""
         }
     });
 });

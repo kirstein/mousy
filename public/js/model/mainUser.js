@@ -1,4 +1,4 @@
-define(['order!backbone'], function(Backbone) {
+define(['order!underscore', 'order!backbone'], function(_, Backbone) {
 
   "use strict";
 
@@ -8,13 +8,15 @@ define(['order!backbone'], function(Backbone) {
             this.socket = socket;
         },
         defaults: {
-            x: -100,
-            y: -100
+            x: 50,
+            y: 50,
+            text : ""
         },
         sync: function () {
             var data = {
-                x: this.get('x'),
-                y: this.get('y')
+                 x: this.get('x'),
+                 y: this.get('y'),
+              text: this.get('text')
             };
             this.socket.emit('sync', data);
         }

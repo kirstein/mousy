@@ -13,3 +13,11 @@ div.content {
     width: 32px;
     background:url('/images/mouse.png') no-repeat top left;
 }
+div.content p {
+    padding:10px;
+    display:block;
+}
+
+input#input {
+    position:absolute;
+}

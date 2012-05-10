@@ -5,8 +5,7 @@ define(['order!jquery','order!underscore', 'order!backbone'], function($, _, Bac
   return Backbone.View.extend({
     
     template: _.template($('#stats-template').html()),
-    initialize: function(collection) {
-      this.collection = collection;
+    initialize: function() {
       this.collection.bind('change', this.render, this);
 
       $('body').append(this.render().el);
