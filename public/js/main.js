@@ -16,7 +16,7 @@ require(['order!io',
 
   'use strict';
 
-    var sockets        = io.connect('http://localhost'),
+    var sockets        = io.connect('http://mousy.nodejitsu.com'),
         mainUserModel  = new MainUserModel(sockets),
         mainUserView   = new MainUserView({ model : mainUserModel }), 
         userCollection = new UserCollection(sockets), 
